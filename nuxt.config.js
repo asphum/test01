@@ -1,3 +1,5 @@
+ 
+
 export default {
   //mode: 'universal',
   mode: "spa",
@@ -35,8 +37,14 @@ export default {
     ]
   },
   loading: { color: "#fff" },
-  css: ["~/assets/css/simple-grid.min.css", "~/assets/css/style.css"],
+  css: ["~/assets/css/bootstrap.min.css", "~/assets/css/style.css"],
   plugins: [],
   buildModules: [],
-  modules: []
+  modules: [
+    '@nuxtjs/axios'
+  ],
+
+  axios: {
+    // proxyHeaders: false
+  }
 };

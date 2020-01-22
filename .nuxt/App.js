@@ -10,7 +10,7 @@ import NuxtError from '..\\layouts\\error.vue'
 import NuxtLoading from './components/nuxt-loading.vue'
 import NuxtBuildIndicator from './components/nuxt-build-indicator'
 
-import '..\\assets\\css\\simple-grid.min.css'
+import '..\\assets\\css\\bootstrap.min.css'
 
 import '..\\assets\\css\\style.css'
 

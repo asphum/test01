@@ -2,9 +2,13 @@
   "name": "test1",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "api/server.js",
   "scripts": {
-    "dev": "nuxt",
+    "server": "nodemon — exec babel-node api/server.js",
+    "client": "nuxt",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "nuxt build",
+    "start": "nuxt start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,8 +25,24 @@
   },
   "homepage": "https://github.com/asphum/test01#readme",
   "dependencies": {
+    "@nuxtjs/axios": "^5.9.3",
+    "apollo-server": "^2.9.16",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "concurrently": "^5.0.2",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "graphql": "^14.5.8",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.8.9",
+    "mongoose-unique-validator": "^2.0.3",
     "nuxt": "^2.11.0",
     "vue-cli": "^2.9.6"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.3",
+    "@babel/core": "^7.8.3",
+    "@babel/node": "^7.8.3",
+    "@babel/preset-env": "^7.8.3"
   }
 }
