@@ -1,5 +1,3 @@
- 
-
 export default {
   //mode: 'universal',
   mode: "spa",
@@ -40,11 +38,15 @@ export default {
   css: ["~/assets/css/bootstrap.min.css", "~/assets/css/style.css"],
   plugins: [],
   buildModules: [],
-  modules: [
-    '@nuxtjs/axios'
-  ],
-
+  modules: ["@nuxtjs/axios", "@nuxtjs/proxy"],
   axios: {
-    // proxyHeaders: false
+    // See https://github.com/nuxt-community/axios-module#options
+    // Set the baseURL to JSONPlaceholder API
+    baseURL: "/api",
+    proxy: true
+  },
+  proxy: {
+    "/photos": "http://127.0.0.1:5000", //-- ตั้งค่า map proxy url api server
+    ws: true
   }
 };

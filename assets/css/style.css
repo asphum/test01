@@ -5,6 +5,7 @@ html {
 .cover-img {
   height: 200px;
   transition: 0.3s;
+  cursor: pointer;
 }
 .cover-img:hover {
   opacity: 0.8;
